@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Главная"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<div class="page__container">
+					<div class="page__pre-search pre-search">
+						<div class="pre-search__search-result search-result">
+							<a href="#" class="search-result__page">Главная</a>
+              <span>/</span>
+							<a href="#" class="search-result__category"> Поиск по запросу «Женские Костюмы»</a>
+						</div>
+						<div class="pre-search__category-result category-result">
+							<a href="#" class="category-result__title">Женские Костюмы</a>
+							<a href="#" class="category-result__quantity">2330 Результатов</a>
+						</div>
+					</div>
+				</div>
+        <div class="page__filter-box">
+          <div class="page__container">
+            <div class="page__filter-box-body">
+              <div class="dropdown">
+                <input type="text" class="dropdown__input" placeholder="Размер" readonly>
+                  <div class="dropdown__option">
+                    <div onclick="show(XS)" class="dropdown__item">XS</div>
+                    <div class="dropdown__item">S</div>
+                    <div class="dropdown__item">M</div>
+                    <div class="dropdown__item">L</div>
+                    <div class="dropdown__item">XL</div>
+                    <div class="dropdown__item">XXL</div>
+                  </div>  
+                <span class="select-arrow"></span>
+              </div>
+              <div class="dropdown">
+                <select name="" class="filters-select">
+                  <option selected disabled>Материал</option>
+                  <option value="">Cotton</option>
+                  <option value="">Silk</option>
+                  <option value="">Wool</option>
+                  <option value="">Nylon</option>
+                  <option value="">Polyester</option>
+                  <option value="">Leather</option>
+                </select>
+                <span class="select-arrow"></span>
+              </div>
+              <div class="dropdown">
+                <select name="" class="filters-select">
+                  <option selected disabled>Цвет</option>
+                  <option value="">Черный</option>
+                  <option value="">Белый</option>
+                  <option value="">Красный</option>
+                  <option value="">Синий</option>
+                  <option value="">Серый</option>
+                </select>
+                <span class="select-arrow"></span>
+              </div>
+              <div class="dropdown">
+                <select name="" class="filters-select">
+                  <option selected disabled>Цена</option>
+                  <option value="">до 500грн</option>
+                  <option value="">от 500 до 1000грн</option>
+                  <option value="">от 1000 до 2000грн</option>
+                  <option value="">Выше 2000грн</option>
+                </select>
+                <span class="select-arrow"></span>
+              </div>
+              <div class="dropdown">
+                <select name="" class="filters-select">
+                  <option selected disabled>Бренд</option>
+                  <option value="">Calvin Klein</option>
+                  <option value="">BOSS</option>
+                  <option value="">Marc O'Polo</option>
+                  <option value="">DIESEL</option>
+                  <option value="">Armani Exchange</option>
+                  <option value="">Giorgio Armani</option>
+                </select>
+                <span class="select-arrow"></span>
+              </div>
+              <div class="dropdown">
+                <select name="" class="filters-select">
+                  <option selected disabled>Сезон</option>
+                  <option value="">Лето</option>
+                  <option value="">Осень</option>
+                  <option value="">Зима</option>
+                  <option value="">Весна</option>
+                </select>
+                <span class="select-arrow"></span>
+              </div>
+              <div class="dropdown">
+                <select name="" class="filters-select">
+                  <option selected disabled>Только sale %</option>
+                  <option value="">Скидка 15%</option>
+                  <option value="">Скидка 35%</option>
+                  <option value="">Скидка 50%</option>
+                </select>
+                <span class="select-arrow"></span>
+              </div>
+            </div>
+          </div> 
+        </div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

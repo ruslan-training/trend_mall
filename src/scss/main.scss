@@ -1,0 +1,134 @@
+//========================PRE FILTER====================================================
+.page {
+    &__pre-search {
+        height: rem(100);
+    }
+}
+.search-result {
+    display: flex;
+    font-size: rem(11);
+    font-weight: 400;
+    color: $silverDark;
+    padding-top: rem(12);
+    @include adaptiveValue("padding-bottom", 30, 15, 375, 320, 1);
+
+    span {
+        font-size: rem(11);
+        font-weight: 400;
+        color: $silverDark;
+    }
+
+    &__page {
+        @include adaptiveValue("padding-right", 10, 5, 375, 320, 1);
+    }
+
+    &__category {
+        @include adaptiveValue("padding-left", 10, 5, 375, 320, 1);
+    }
+}
+.category-result {
+    display: flex;
+    align-items: center;
+
+    &__title {
+        font-weight: 600;
+        @include adaptiveValue("font-size", 20, 14, 375, 320, 1);
+        line-height: rem(24);
+        letter-spacing: 0.03em;
+        color: $mainColor;
+        margin: 0px rem(10) 0px 0px;
+    }
+
+    &__quantity {
+        font-weight: 500;
+        font-size: rem(12);
+        line-height: rem(15);
+        color: $silverDark;
+    }
+}
+//=========================FILTER-BOX===================================================
+.page__filter-box {
+    background-color: $lightSilverDark;
+}
+.page__filter-box-body {
+    display: flex;
+    align-items: center;
+    column-gap: rem(4);
+
+    padding: rem(16) 0px rem(15) 0px;
+}
+.dropdown {
+    position: relative;
+    max-width: calc((100% - 24px) / 7);
+    width: 100%;
+    height: 36px;
+    border-radius: 2px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 53%;
+        transform: translateY(-53%);
+        right: rem(5);
+        width: rem(4);
+        height: rem(4);
+        border-top: 4px solid $mainColor;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        cursor: pointer;
+        pointer-events: none;
+
+        transition: all 0.4s ease 0s;
+
+        z-index: 2;
+    }
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 2px;
+        background-color: $mainWhite;
+        outline: none;
+        padding: rem(10);
+
+        color: $mainColor;
+        font-size: rem(12);
+        font-weight: 500;
+    }
+
+    &__option {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        border-radius: 2px;
+        overflow: hidden;
+
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.6s ease 0s;
+    }
+
+    &__item {
+        color: $mainColor;
+        font-size: rem(12);
+        font-weight: 500;
+
+        padding: rem(5) rem(10);
+        cursor: pointer;
+
+        &:hover {
+            background-color: #62baea;
+            color: $mainWhite;
+        }
+    }
+}
+.dropdown._active .dropdown__option {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.6s ease 0s;
+}
+
